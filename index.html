@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>010Hub</title>
+<link rel="icon" type="image/png" href="assets/images/010hub-logo.png">
+
+<style>
+    html,
+    body {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        /* 按截图校准 */
+        background: #282c34;
+    }
+
+    canvas {
+        display: block;
+        width: 100%;
+        height: 100%;
+
+        background: #282c34;
+    }
+</style>
+</head>
+
+<body>
+
+<canvas id="cmatrix"></canvas>
+
+<script>
+"use strict";
+
+/*
+|--------------------------------------------------------------------------
+| Visual configuration
+|--------------------------------------------------------------------------
+|
+| 这些值按你提供的 cmatrix 截图校准。
+|
+*/
+
+const CONFIG = {
+
+    /*
+     * 截图背景色
+     */
+    background: "#282c34",
+
+    /*
+     * 截图中主要 Matrix 绿色
+     */
+    green: "#98c379",
+
+    /*
+     * cmatrix head 的浅色
+     */
+    white: "#d7dae0",
+
+    /*
+     * 字体
+     *
+     * macOS 优先 Menlo。
+     * 如果你的截图使用的是其他终端字体，
+     * 可以只修改这里。
+     */
+    fontFamily:
+        "Menlo, Monaco, Consolas, monospace",
+
+    /*
+     * 截图属于小字体、高密度效果。
+     */
+    fontSize: 11,
+
+    /*
+     * 终端行高。
+     */
+    lineHeight: 12,
+
+    /*
+     * 对应 cmatrix 默认：
+     *
+     * update = 4
+     * napms(update * 10)
+     */
+    updateDelay: 40,
+
+    /*
+     * cmatrix 默认：
+     *
+     * asynch = 0
+     */
+    asynchronous: false,
+
+    /*
+     * cmatrix 默认：
+     *
+     * changes = 0
+     */
+    changes: false,
+
+    /*
+     * cmatrix 默认：
+     *
+     * bold = 0
+     */
+    bold: 0
+
+};
+
+
+/*
+|--------------------------------------------------------------------------
+| CMatrix constants
+|--------------------------------------------------------------------------
+*/
+
+const EMPTY = -1;
+const SPACE = 32;
+
+
+/*
+|--------------------------------------------------------------------------
+| Canvas
+|--------------------------------------------------------------------------
+*/
+
+const canvas =
+    document.getElementById("cmatrix");
+
+const ctx =
+    canvas.getContext("2d");
+
+
+let WIDTH = 0;
+let HEIGHT = 0;
+
+let COLS = 0;
+let LINES = 0;
+
+let charWidth = 0;
+
+
+/*
+|--------------------------------------------------------------------------
+| cmatrix state
+|--------------------------------------------------------------------------
+|
+| 对应：
+|
+| cmatrix **matrix;
+| int *length;
+| int *spaces;
+| int *updates;
+|
+*/
+
+let matrix = [];
+
+let length = [];
+let spaces = [];
+let updates = [];
+
+let count = 0;
+
+
+/*
+|--------------------------------------------------------------------------
+| Random character
+|--------------------------------------------------------------------------
+|
+| cmatrix.c 默认：
+|
+| randmin = 33
+| highnum = 123
+| randnum = highnum - randmin
+|
+| rand() % randnum + randmin
+|
+| 因此实际范围：
+|
+| ASCII 33 ~ 122
+|
+*/
+
+function randomCharacter() {
+
+    const randmin = 33;
+    const highnum = 123;
+
+    const randnum =
+        highnum - randmin;
+
+    return (
+        Math.floor(
+            Math.random() * randnum
+        ) + randmin
+    );
+
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Create cell
+|--------------------------------------------------------------------------
+*/
+
+function createCell() {
+
+    return {
+
+        val: EMPTY,
+
+        isHead: false
+
+    };
+
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| var_init()
+|--------------------------------------------------------------------------
+|
+| 按 cmatrix.c 的 var_init() 数据结构初始化。
+|
+*/
+
+function varInit() {
+
+    matrix = [];
+    length = [];
+    spaces = [];
+    updates = [];
+
+
+    /*
+     * 创建：
+     *
+     * matrix[LINES + 1][COLS]
+     */
+
+    for (
+        let i = 0;
+        i <= LINES;
+        i++
+    ) {
+
+        matrix[i] = [];
+
+
+        for (
+            let j = 0;
+            j < COLS;
+            j++
+        ) {
+
+            matrix[i][j] =
+                createCell();
+
+        }
+
+    }
+
+
+    /*
+     * cmatrix：
+     *
+     * for (j = 0; j <= COLS - 1; j += 2)
+     */
+
+    for (
+        let j = 0;
+        j < COLS;
+        j += 2
+    ) {
+
+        /*
+         * spaces[j] =
+         *
+         * rand() % LINES + 1;
+         */
+
+        spaces[j] =
+            Math.floor(
+                Math.random() * LINES
+            ) + 1;
+
+
+        /*
+         * length[j] =
+         *
+         * rand() % (LINES - 3) + 3;
+         */
+
+        length[j] =
+            Math.floor(
+                Math.random() *
+                Math.max(1, LINES - 3)
+            ) + 3;
+
+
+        /*
+         * Sentinel：
+         *
+         * matrix[1][j].val = ' ';
+         */
+
+        matrix[1][j].val =
+            SPACE;
+
+
+        /*
+         * updates[j] =
+         *
+         * rand() % 3 + 1;
+         */
+
+        updates[j] =
+            Math.floor(
+                Math.random() * 3
+            ) + 1;
+
+    }
+
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Resize
+|--------------------------------------------------------------------------
+*/
+
+function resize() {
+
+    const dpr =
+        window.devicePixelRatio || 1;
+
+
+    WIDTH =
+        window.innerWidth;
+
+    HEIGHT =
+        window.innerHeight;
+
+
+    canvas.width =
+        Math.floor(WIDTH * dpr);
+
+    canvas.height =
+        Math.floor(HEIGHT * dpr);
+
+
+    canvas.style.width =
+        WIDTH + "px";
+
+    canvas.style.height =
+        HEIGHT + "px";
+
+
+    ctx.setTransform(
+        dpr,
+        0,
+        0,
+        dpr,
+        0,
+        0
+    );
+
+
+    /*
+     * 字体设置
+     */
+
+    ctx.font =
+        `${CONFIG.fontSize}px ${CONFIG.fontFamily}`;
+
+
+    ctx.textBaseline =
+        "top";
+
+
+    /*
+     * 计算一个 Terminal Cell 的宽度。
+     */
+
+    charWidth =
+        ctx.measureText("M").width;
+
+
+    /*
+     * Web 像素空间
+     * → 模拟 Terminal 的 COLS / LINES
+     */
+
+    COLS =
+        Math.floor(
+            WIDTH / charWidth
+        );
+
+
+    LINES =
+        Math.floor(
+            HEIGHT /
+            CONFIG.lineHeight
+        );
+
+
+    if (LINES < 10) {
+        LINES = 10;
+    }
+
+
+    if (COLS < 10) {
+        COLS = 10;
+    }
+
+
+    varInit();
+
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Update one column
+|--------------------------------------------------------------------------
+|
+| 对应 cmatrix.c：
+|
+| New style scrolling (default)
+|
+*/
+
+function updateColumn(j) {
+
+    /*
+     * cmatrix：
+     *
+     * if (
+     *     matrix[0][j].val == -1 &&
+     *     matrix[1][j].val == ' ' &&
+     *     spaces[j] > 0
+     * )
+     *
+     *     spaces[j]--;
+     */
+
+    if (
+
+        matrix[0][j].val === EMPTY &&
+
+        matrix[1][j].val === SPACE &&
+
+        spaces[j] > 0
+
+    ) {
+
+        spaces[j]--;
+
+    }
+
+
+    /*
+     * 创建新的字符段
+     */
+
+    else if (
+
+        matrix[0][j].val === EMPTY &&
+
+        matrix[1][j].val === SPACE
+
+    ) {
+
+        length[j] =
+            Math.floor(
+                Math.random() *
+                Math.max(
+                    1,
+                    LINES - 3
+                )
+            ) + 3;
+
+
+        matrix[0][j].val =
+            randomCharacter();
+
+
+        matrix[0][j].isHead =
+            false;
+
+
+        spaces[j] =
+            Math.floor(
+                Math.random() * LINES
+            ) + 1;
+
+    }
+
+
+    /*
+     * 对应：
+     *
+     * i = 0;
+     * y = 0;
+     * firstcoldone = 0;
+     */
+
+    let i = 0;
+
+    let y = 0;
+
+    let firstcoldone = 0;
+
+
+    /*
+     * 扫描整列。
+     */
+
+    while (i <= LINES) {
+
+        /*
+         * Skip over spaces
+         *
+         * while (
+         *     matrix[i][j].val == ' ' ||
+         *     matrix[i][j].val == -1
+         * )
+         */
+
+        while (
+
+            i <= LINES &&
+
+            (
+
+                matrix[i][j].val === SPACE ||
+
+                matrix[i][j].val === EMPTY
+
+            )
+
+        ) {
+
+            i++;
+
+        }
+
+
+        if (i > LINES) {
+
+            break;
+
+        }
+
+
+        /*
+         * Go to the head of this column
+         */
+
+        const z = i;
+
+        y = 0;
+
+
+        /*
+         * 找到连续字符段。
+         */
+
+        while (
+
+            i <= LINES &&
+
+            matrix[i][j].val !== SPACE &&
+
+            matrix[i][j].val !== EMPTY
+
+        ) {
+
+            /*
+             * 旧 Head 取消 Head 状态。
+             */
+
+            matrix[i][j].isHead =
+                false;
+
+
+            /*
+             * cmatrix -k：
+             *
+             * changes && rand() % 8 == 0
+             */
+
+            if (
+
+                CONFIG.changes &&
+
+                Math.floor(
+                    Math.random() * 8
+                ) === 0
+
+            ) {
+
+                matrix[i][j].val =
+                    randomCharacter();
+
+            }
+
+
+            i++;
+
+            y++;
+
+        }
+
+
+        /*
+         * 字符段到底部。
+         */
+
+        if (i > LINES) {
+
+            matrix[z][j].val =
+                SPACE;
+
+
+            matrix[z][j].isHead =
+                false;
+
+
+            continue;
+
+        }
+
+
+        /*
+         * 在字符段尾部增加新的字符。
+         */
+
+        matrix[i][j].val =
+            randomCharacter();
+
+
+        matrix[i][j].isHead =
+            true;
+
+
+        /*
+         * cmatrix：
+         *
+         * if (
+         *     y > length[j] ||
+         *     firstcoldone
+         * )
+         *
+         * {
+         *
+         *     matrix[z][j].val = ' ';
+         *     matrix[0][j].val = -1;
+         *
+         * }
+         */
+
+        if (
+
+            y > length[j] ||
+
+            firstcoldone
+
+        ) {
+
+            matrix[z][j].val =
+                SPACE;
+
+
+            matrix[z][j].isHead =
+                false;
+
+
+            matrix[0][j].val =
+                EMPTY;
+
+        }
+
+
+        firstcoldone = 1;
+
+
+        i++;
+
+    }
+
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Update matrix
+|--------------------------------------------------------------------------
+*/
+
+function updateMatrix() {
+
+    /*
+     * cmatrix：
+     *
+     * count++;
+     *
+     * if (count > 4)
+     *     count = 1;
+     */
+
+    count++;
+
+
+    if (count > 4) {
+
+        count = 1;
+
+    }
+
+
+    /*
+     * cmatrix：
+     *
+     * for (j = 0; j <= COLS - 1; j += 2)
+     */
+
+    for (
+
+        let j = 0;
+
+        j < COLS;
+
+        j += 2
+
+    ) {
+
+        /*
+         * 默认：
+         *
+         * asynch == 0
+         *
+         * 所有列一起更新。
+         */
+
+        if (
+
+            (
+
+                count > updates[j] ||
+
+                !CONFIG.asynchronous
+
+            )
+
+        ) {
+
+            updateColumn(j);
+
+        }
+
+    }
+
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Draw matrix
+|--------------------------------------------------------------------------
+|
+| 不使用：
+|
+| - Alpha Trail
+| - Glow
+| - Gradient
+|
+| 每一帧完整按照 matrix 状态绘制。
+|
+*/
+
+function drawMatrix() {
+
+    /*
+     * 清屏。
+     */
+
+    ctx.fillStyle =
+        CONFIG.background;
+
+
+    ctx.fillRect(
+
+        0,
+        0,
+
+        WIDTH,
+        HEIGHT
+
+    );
+
+
+    /*
+     * cmatrix New Style：
+     *
+     * y = 1
+     * z = LINES
+     */
+
+    for (
+
+        let i = 1;
+
+        i <= LINES;
+
+        i++
+
+    ) {
+
+        for (
+
+            let j = 0;
+
+            j < COLS;
+
+            j += 2
+
+        ) {
+
+            const cell =
+                matrix[i][j];
+
+
+            /*
+             * 空白不绘制。
+             */
+
+            if (
+
+                cell.val === EMPTY ||
+
+                cell.val === SPACE
+
+            ) {
+
+                continue;
+
+            }
+
+
+            /*
+             * Head → 白色
+             *
+             * Body → 截图中的绿色
+             */
+
+            if (cell.isHead) {
+
+                ctx.fillStyle =
+                    CONFIG.white;
+
+            } else {
+
+                ctx.fillStyle =
+                    CONFIG.green;
+
+            }
+
+
+            /*
+             * 默认 cmatrix：
+             *
+             * bold = 0
+             */
+
+            ctx.font =
+                `${CONFIG.fontSize}px ${CONFIG.fontFamily}`;
+
+
+            /*
+             * j += 2
+             *
+             * 保留 cmatrix 原始的隔列逻辑。
+             */
+
+            const x =
+                j * charWidth;
+
+
+            const y =
+                (i - 1) *
+                CONFIG.lineHeight;
+
+
+            ctx.fillText(
+
+                String.fromCharCode(
+                    cell.val
+                ),
+
+                x,
+                y
+
+            );
+
+        }
+
+    }
+
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Animation
+|--------------------------------------------------------------------------
+*/
+
+let lastUpdate = 0;
+
+
+function animate(timestamp) {
+
+    /*
+     * cmatrix 默认：
+     *
+     * napms(update * 10)
+     *
+     * update = 4
+     *
+     * → 40ms
+     */
+
+    if (
+
+        timestamp - lastUpdate >=
+        CONFIG.updateDelay
+
+    ) {
+
+        updateMatrix();
+
+        lastUpdate =
+            timestamp;
+
+    }
+
+
+    drawMatrix();
+
+
+    requestAnimationFrame(
+        animate
+    );
+
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Keyboard controls
+|--------------------------------------------------------------------------
+|
+| 保留几个 cmatrix 的核心操作：
+|
+| a → Async
+| k → Character changes
+| b → Bold
+| B → All bold
+| n → Normal
+|
+*/
+
+window.addEventListener(
+
+    "keydown",
+
+    event => {
+
+        switch (event.key) {
+
+            case "a":
+
+                CONFIG.asynchronous =
+                    !CONFIG.asynchronous;
+
+                break;
+
+
+            case "k":
+
+                CONFIG.changes =
+                    !CONFIG.changes;
+
+                break;
+
+
+            case "b":
+
+                CONFIG.bold = 1;
+
+                break;
+
+
+            case "B":
+
+                CONFIG.bold = 2;
+
+                break;
+
+
+            case "n":
+
+                CONFIG.bold = 0;
+
+                break;
+
+        }
+
+    }
+
+);
+
+
+/*
+|--------------------------------------------------------------------------
+| Start
+|--------------------------------------------------------------------------
+*/
+
+window.addEventListener(
+    "resize",
+    resize
+);
+
+
+resize();
+
+
+requestAnimationFrame(
+    animate
+);
+
+</script>
+
+</body>
+</html>
