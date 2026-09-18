@@ -1,0 +1,377 @@
+{
+  "Aosp": {
+    "AOSP": "https://blog.csdn.net/chengyq116/article/details/142282499",
+    "AOSPXRef": "http://aospxref.com/",
+    "AndroidXRef": "http://androidxref.com/",
+    "Aosp": "https://source.android.com/",
+    "AospApp": "https://aosp.app/",
+    "XRefAndroid": "https://xrefandroid.com/"
+  },
+  "CTF": {
+    "BUUCTF": "https://buuoj.cn/",
+    "CTFHub": "https://www.ctfhub.com/#/index",
+    "CTFShow": "https://ctf.show/",
+    "CTFTools": "https://www.ctftools.com/",
+    "CTFWiki": "https://ctf-wiki.org/introduction/resources/",
+    "HackTheBox": "https://www.hackthebox.com/"
+  },
+  "Forum": {
+    "Black Hat": "https://www.blackhat.com/",
+    "BreachForums": "https://breachforums.is/",
+    "Power Of Community": "https://powerofcommunity.net/",
+    "SRC导航": "https://www.anquanke.com/src",
+    "Virus Encyclopedia": "http://virus.wikidot.com/",
+    "Web安全": {
+      "T00ls": "https://www.t00ls.com/index.php",
+      "先知社区": "https://xz.aliyun.com/",
+      "圈子": "https://www.secquan.org/",
+      "小迪安全": "http://xiaodi8.com/?id=3",
+      "棱角社区": "https://forum.ywhack.com/index.php"
+    },
+    "二进制": {
+      "MT论坛": "https://bbs.binmt.cc/forum-41-1.html",
+      "Win32K": "https://www.win32k.cn/",
+      "iOSRE": "https://iosre.com/",
+      "吾爱破解": "https://www.52pojie.cn/forum-65-1.html",
+      "看雪论坛": "https://bbs.kanxue.com/forum-161.htm",
+      "精易论坛": "https://bbs.125.la/forum.php?mod=forumdisplay&fid=206&filter=typeid&typeid=589",
+      "逆想论坛": "https://nixiang.tech/",
+      "飘云阁": "https://www.chinapyg.com/",
+      "海外": {
+        "OpenRCE": "http://www.openrce.org/articles/",
+        "Platinmods": "https://platinmods.com/",
+        "Quarkslab": "https://blog.quarkslab.com/index.html",
+        "RevEngineering": "https://reverseengineering.stackexchange.com/",
+        "Tuts4You": "https://forum.tuts4you.com/",
+        "XDA Forums": "https://xdaforums.com/tags/reverse-engineering/",
+        "eXeTools": "https://forum.exetools.com/index.php",
+        "iOSGods": "https://iosgods.com/"
+      }
+    }
+  },
+  "Game": {
+    "Cocos2D": {
+      "Cocos API": "https://docs.cocos.com/creator/api/zh/"
+    },
+    "UEx": {
+      "UE4反射": "https://zhuanlan.zhihu.com/p/667358666",
+      "UE4汉化字体问题": "https://www.bilibili.com/video/BV1PF411p7G4/",
+      "UESdkDump": "https://bbs.kanxue.com/thread-282857.htm#msg_header_h2_2",
+      "UE符号恢复": "https://bbs.kanxue.com/thread-278264.htm#msg_header_h1_1",
+      "中文字体无法显示": "https://forums.unrealengine.com/t/topic/475458",
+      "修复UE结构体": "https://www.jianshu.com/p/f2a949fa64f2",
+      "虚幻引擎文档": "https://dev.epicgames.com/documentation/zh-cn/unreal-engine",
+      "虚幻社区知识库": "https://ue5wiki.com/",
+      "记一次UE4汉化": "https://1a4.top/2024/09/10/%E8%AE%B0%E4%B8%80%E6%AC%A1UE4%E6%B1%89%E5%8C%96/",
+      "UE4": {
+        "GName内存解析": "https://www.cnblogs.com/revercc/p/17629584.html",
+        "GWORLD GName GameInstance": "http://www.pentester.top/index.php/archives/117/",
+        "PUBG透视": "https://bbs.kanxue.com/thread-272519.htm",
+        "ShooterGame外挂实现": "https://renyili.org/post/game_cheat2/",
+        "UE4)手游逆向": "https://iosre.com/t/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1%E8%99%9A%E5%B9%BB4ue4%E6%89%8B%E6%B8%B8%E9%80%86%E5%90%91/19808",
+        "UE4最完整的逆向指南及视频教程": "https://www.win32k.cn/d/46-ue4zui-wan-zheng-de-ni-xiang-zhi-nan-ji-shi-pin-jiao-cheng",
+        "UE4游戏从何下手？": "https://iosre.com/t/ue4%E6%B8%B8%E6%88%8F%E4%BB%8E%E4%BD%95%E4%B8%8B%E6%89%8B%EF%BC%9F/17755",
+        "UE4逆向": "https://www.bilibili.com/video/BV18y411Y7Ma/?vd_source=b7f5417bfa648147bbbaedc2f250b061",
+        "UE4逆向笔记之手动解析类名及类-软件逆向-看雪-安全社区|安全招聘|kanxue.com": "https://bbs.kanxue.com/thread-275680.htm",
+        "UE4逆向篇-1_FNamePool": "https://blog.csdn.net/qq_18120361/article/details/133932030",
+        "UnrealEngine4恢复符号过程分析": "http://www.yxfzedu.com/article/670",
+        "[原创]UE4逆向笔记之GObjectArray-软件逆向-看雪-安全社区|安全招聘|kanxue.com": "https://bbs.kanxue.com/thread-275795.htm",
+        "[原创]UE4逆向笔记之内部绘制-软件逆向-看雪-安全社区|安全招聘|kanxue.com": "https://bbs.kanxue.com/thread-275804.htm",
+        "ue5游戏逆向之寻找GWorld，GName和GUObjectArray": "https://www.cnblogs.com/revercc/p/17641855.html",
+        "记录一次虚幻4(UE4)手游逆向": "https://iosre.com/t/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1%E8%99%9A%E5%B9%BB4ue4%E6%89%8B%E6%B8%B8%E9%80%86%E5%90%91/19808/1",
+        "逆向UE4最全的一集": "https://www.52pojie.cn/thread-1838396-1-1.html",
+        "郁金香灬老师": "https://www.yjxsoft.com/forum.php?mod=viewthread&tid=22&page=1&extra=#pid33"
+      }
+    },
+    "Unity3D": {
+      "U3D符号恢复": "https://bbs.kanxue.com/thread-273064.htm",
+      "Unity API": "https://docs.unity.cn/cn/2021.3/ScriptReference/index.html",
+      "U3D": {
+        "Code Stage": "https://codestage.net/",
+        "HybridCLR": "https://code-philosophy.com/",
+        "IL2CPP代码裁剪与生成全流程剖析": "https://www.lfzxb.top/il2cpp-all-in-one/",
+        "Perfare's Blog": "https://www.perfare.net/",
+        "U3DTutoria": "https://github.com/mskgroup/Unity-Game-localization-tutorial-and-toolkit",
+        "U3D汉化思路": "https://bbs.kanxue.com/thread-262295.htm",
+        "UGUI": "https://edu.csdn.net/course/detail/7502",
+        "Unity IL2CPP 游戏逆向": "https://dev.moe/1282",
+        "Unity 引擎资源管理代码分析 ( 1 )": "https://cloud.tencent.com/developer/article/1005786",
+        "Unity 引擎资源管理代码分析( 3 )": "https://cloud.tencent.com/developer/article/1005853",
+        "Unity3D入门基础知识汇总": "https://blog.csdn.net/benben044/article/details/135367863?ops_request_misc=%257B%2522request%255Fid%2522%253A%252200f06f9ea621dd61f2ebb1d68bf8cd7a%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=00f06f9ea621dd61f2ebb1d68bf8cd7a&biz_id=0",
+        "Unity3D技术栈": "https://blog.csdn.net/m0_37602827/article/details/128731256?ops_request_misc=%257B%2522request%255Fid%2522%253A%252200f06f9ea621dd61f2ebb1d68bf8cd7a%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=00f06f9ea621dd61f2ebb1d68bf8cd7a&biz_id=0",
+        "Unity引擎资源管理代码分析 ( 2 )": "https://cloud.tencent.com/developer/article/1005843",
+        "Unity手游汉化笔记": "https://www.cnblogs.com/guobaoxu/p/12055930.html",
+        "Unity游戏逆向": "https://www.52pojie.cn/thread-1631028-1-1.html",
+        "[Unity3D-游戏汉化教程]第1期：Mono脚本 Assembly-CSharp-Icetric冰介-Unity游戏本地化教程-哔哩哔哩视频": "https://www.bilibili.com/list/2802429?sid=1002622&spm_id_from=333.999.0.0&desc=1&oid=885369026&bvid=BV12K4y1j7w7",
+        "[Unity] 在运行时替换字体 – 摇光": "https://blog.palug.cn/3068.html",
+        "frida-il2cpp-bridge": "https://github.com/vfsfitvnm/frida-il2cpp-bridge/wiki/Snippets",
+        "il2cpp-part-1": "https://katyscode.wordpress.com/2020/06/24/il2cpp-part-1/",
+        "元气骑士存档解密": "https://www.neko.ink/2023/10/10/soul-knight-data-edit/",
+        "记一次安卓Unity-IL2CPP动态调试拿到加密算法的思路 - Wankko Ree's Blog": "https://wkr.moe/study/884.html"
+      }
+    }
+  },
+  "Hook": {
+    "jsDebug": "https://www.jsdebug.cn/#/home",
+    "jsHook": "https://jshook.org/",
+    "frida": {
+      "FRIDA-API使用篇": "https://www.anquanke.com/post/id/195869",
+      "FRIDA系列文章": "https://blog.csdn.net/freeking101/article/details/107525584",
+      "Frida CodeShare": "https://codeshare.frida.re/",
+      "FridaJsApi_CN": "https://blog.csdn.net/iloveitvm/article/details/109119687",
+      "FridaJsApi_EN": "https://frida.re/docs/javascript-api/",
+      "frida-hook-java": "https://kevinspider.github.io/frida/frida-hook-java/",
+      "Frida CodeShare (Folder 2)": {
+        "FridaSwiftDump": "https://codeshare.frida.re/@neil-wu/fridaswiftdump/"
+      },
+      "Frida CodeShare (Folder 3)": {
+        "InMemoryDexClassLoader dump": "https://codeshare.frida.re/@cryptax/inmemorydexclassloader-dump/"
+      },
+      "Frida CodeShare (Folder 4)": {
+        "Native function backtraces": "https://codeshare.frida.re/@InvictusNinja/backtraces/"
+      },
+      "Frida CodeShare (Folder 5)": {
+        "[SQLite Database]": "https://codeshare.frida.re/@ninjadiary/sqlite-database/"
+      },
+      "Frida CodeShare (Folder 6)": {
+        "[android-crypto-interceptor]": "https://codeshare.frida.re/@hyugogirubato/android-crypto-interceptor/"
+      },
+      "Frida CodeShare (Folder 7)": {
+        "[android-tcp-trace]": "https://codeshare.frida.re/@KhanhPham2411/android-tcp-trace/"
+      },
+      "Frida CodeShare (Folder 8)": {
+        "[trace-function-calls]": "https://codeshare.frida.re/@d3z3n0v3/trace-function-calls/"
+      },
+      "Frida CodeShare (Folder 9)": {
+        "frida-multiple-unpinning": "https://codeshare.frida.re/@akabe1/frida-multiple-unpinning/"
+      }
+    },
+    "substrate": {
+      "Cydia Substrate": "https://www.cydiasubstrate.com/"
+    },
+    "xposed": {
+      "Module Repository": "https://modules.lsposed.org/",
+      "Xposed API": "http://api.xposed.info/reference/packages.html",
+      "Xposed Module": "https://repo.xposed.info/module-overview",
+      "Xposed框架定制": "https://bbs.kanxue.com/thread-269627.htm"
+    }
+  },
+  "LLVM": {
+    "Angr API": "https://docs.angr.io/en/latest/",
+    "Angr使用-Part I": "https://blog.gentlecp.com/article/61784.html",
+    "LLVM": "https://github.com/llvm/llvm-project",
+    "LLVM Reference Manual": "https://llvm.org/docs/LangRef.html",
+    "OLLVM": "https://github.com/heroims/obfuscator/tree/llvm-9.0.1",
+    "利用angr去除混淆": "https://www.52pojie.cn/thread-1484714-1-1.html"
+  },
+  "PE&ELF": {
+    "DexFile": "http://androidxref.com/4.4_r1/xref/dalvik/vm/native/dalvik_system_DexFile.cpp",
+    "Linker": "http://androidxref.com/4.4_r1/xref/bionic/linker/linker.cpp",
+    "Linker (2)": "https://blog.csdn.net/tencent_bugly/article/details/52668772",
+    "LinkerCPP": "https://android.googlesource.com/platform/bionic/+/master/linker/linker.cpp"
+  },
+  "Packer": {
+    "ApkPecker": "https://apkpecker.qq.com/",
+    "CloudProtect": "https://cloudprotect.top/",
+    "GuardSquare": "https://www.guardsquare.com/",
+    "Safengine": "http://www.safengine.com/",
+    "三六零天御": "https://360tianyu.cn/#/global/vip/packages",
+    "几维科技": "https://www.kiwitap.com/",
+    "娜迦科技": "https://www.nagain.com/#/home/index",
+    "小密盾­": "https://www.xmprotect.com/",
+    "梆梆安全": "https://www.bangcle.com/index.html",
+    "爱加密": "https://www.ijiami.cn/",
+    "飞盾 FlyProtect": "http://www.flyprotect.cn/#features",
+    "加固分析": {
+      "360加固-脱壳修复": "https://zhuanlan.zhihu.com/p/98456403",
+      "360加固分析": "https://bbs.pediy.com/thread-258511.htm",
+      "APK加固总结": "https://hanshuliang.blog.csdn.net/article/details/115458625",
+      "DEX_VMP": "https://bbs.pediy.com/thread-270799.htm",
+      "乐固分析": "https://bbs.pediy.com/thread-271362.htm",
+      "几维加固分析": "https://bbs.pediy.com/thread-271491.htm",
+      "百度加固分析": "https://bbs.pediy.com/thread-257926.htm",
+      "非系统ssl库的证书校验": "https://bbs.pediy.com/thread-268014.htm"
+    }
+  },
+  "Pwn": {
+    "CVE": "http://cve.mitre.org/",
+    "Exploits-DB": "https://www.exploit-db.com/",
+    "MSRC": "https://msrc.microsoft.com/leaderboard",
+    "PWN学习指南": "https://www.cnblogs.com/VxerLee/p/15424926.html",
+    "goabout2": "https://www.cnblogs.com/goabout2/",
+    "知道创宇": "https://paper.seebug.org/"
+  },
+  "RE": {
+    "Angr API Reference": "https://docs.angr.io/en/latest/api.html",
+    "Azeria Labs": "https://azeria-labs.com/",
+    "C++ Insights": "https://cppinsights.io/",
+    "Compiler Explorer": "https://gcc.godbolt.org/",
+    "Crackmes": "https://crackmes.one/",
+    "Decompiler Explorer": "https://dogbolt.org/",
+    "IDATips": "https://hex-rays.com/blog/tag/idatips",
+    "IdaPlugContest": "https://www.hex-rays.com/contests/index.shtml",
+    "Introduction to ARM": "https://www.davespace.co.uk/arm/introduction-to-arm/index.html",
+    "MLM01": "https://mlm01.com/index",
+    "Reverse Engineering Tips": "https://reverseengineeringtips.blogspot.com/",
+    "iBinary": "https://www.cnblogs.com/iBinary/category/1067669.html",
+    "x64dbg 插件": "https://bbs.kanxue.com/thread-266488-1.htm",
+    "软件逆向之算法逆向系列": "https://bbs.ichunqiu.com/forum.php?mod=collection&action=view&ctid=116",
+    "Anti Rootkit": {
+      "Anti_Rootkit": "https://www.52pojie.cn/thread-1808288-1-1.html",
+      "PCHunter": "https://www.anxinsec.com/view/antirootkit/",
+      "YDArk": "https://github.com/ClownQq/YDArk"
+    },
+    "Disassemblers": {
+      "AS3 Sorcerer": "https://www.buraks.com/as3sorcerer/",
+      "Binary Ninja": "https://binary.ninja/",
+      "Cheat Engine": "https://www.cheatengine.org/",
+      "GameGuardian": "https://gameguardian.net/forum/",
+      "Ghidra": "https://github.com/NationalSecurityAgency/ghidra",
+      "Gjoy Dex Analysizer": "http://www.gda.wiki:9090/update_list.php",
+      "Hex Rays IDA Pro": "https://hex-rays.com/ida-pro/",
+      "Hex-Rays Docs": "https://docs.hex-rays.com/",
+      "Hopper": "https://www.hopperapp.com/",
+      "JEB Decompiler": "https://www.pnfsoftware.com/",
+      "Jadx": "https://github.com/skylot/jadx",
+      "OllyDbg": "https://www.ollydbg.de/",
+      "x64dbg": "https://x64dbg.com/",
+      "IDA Plugin": {
+        "Gepetto": "https://github.com/JusticeRage/Gepetto",
+        "showcomments": "https://github.com/merces/showcomments"
+      }
+    }
+  },
+  "Risk": {
+    "同盾科技": "https://www.tongdun.cn/",
+    "数字联盟": "https://www.shuzilm.cn/",
+    "数美科技": "https://www.ishumei.com/",
+    "极验": "https://www2.geetest.com/",
+    "网易易盾": "https://dun.163.com/product/risk-engine",
+    "风控对抗": "https://bbs.kanxue.com/thread-273759.htm",
+    "风控构建": "https://tech.meituan.com/2017/01/13/risk-control-system-experience-sharing.html",
+    "风控规则": "https://tech.meituan.com/2020/05/14/meituan-security-zeus.html"
+  },
+  "Sandbox": {
+    "Android 沙箱机制": "https://blog.csdn.net/fei20121106/article/details/84023953",
+    "SPromoter开启沙盒虚拟存储": "https://bbs.kanxue.com/thread-266482.htm",
+    "VA产品说明&开发指导": "https://github.com/asLody/VirtualApp/blob/master/README.md",
+    "VA基础开发文档": "https://github.com/asLody/VirtualApp/blob/master/doc/VADev.md",
+    "VA源码分析": "https://blog.csdn.net/ganyao939543405/article/details/76146760",
+    "深入理解沙箱存储机制": "https://blog.csdn.net/qq_36518248/article/details/114477667"
+  },
+  "Tools": {
+    "API Monitor": "http://www.rohitab.com/apimonitor",
+    "APK Tool GUI": "https://androidmtk.com/apk-tool-gui",
+    "Arm2Hex": "https://armconverter.com/",
+    "CyberChef": "https://gchq.github.io/CyberChef/",
+    "EasyTshark": "https://online.easytshark.com/app/profile",
+    "Float to Hex": "https://gregstoll.com/~gregstoll/floattohex/",
+    "GM Devices": "https://storage.googleapis.com/play_public/supported_devices.html",
+    "IDAPythonAPI": "https://www.hex-rays.com/products/ida/support/idapython_docs/",
+    "Interactive IDA Plugin List": "https://vmallet.github.io/ida-plugins/",
+    "Keygener Assistant": "https://www.52pojie.cn/thread-736595-1-1.html",
+    "MikRom2.0": "https://docs.missking.cc/zh/",
+    "PYG密码学综合工具": "https://www.chinapyg.com/thread-10433-1-1.html",
+    "ReClassEx": "https://github.com/ajkhoury/ReClassEx",
+    "Rijndael Inspector": "https://formaestudio.com/rijndaelinspector/archivos/inspector.html",
+    "ToolsFx": "https://github.com/Leon406/ToolsFx",
+    "Uiautomator2": "https://github.com/openatx/uiautomator2",
+    "VirusTotal": "https://www.virustotal.com/gui/home/upload",
+    "WinSCP": "https://winscp.net/eng/index.php",
+    "白盒密码学": "https://en.wikipedia.org/wiki/White-box_cryptography",
+    "加密": {
+      "解密": {
+        "AES": "https://gchq.github.io/CyberChef/#recipe=AES_Encrypt(%7B'option':'Hex','string':''%7D,%7B'option':'Hex','string':''%7D,'CBC','Raw','Hex',%7B'option':'Hex','string':''%7D)AES_Decrypt(%7B'option':'Hex','string':''%7D,%7B'option':'Hex','string':''%7D,'CBC','Hex','Raw',%7B'option':'Hex','string':''%7D,%7B'option':'Hex','string':''%7D)",
+        "Blowfish": "https://gchq.github.io/CyberChef/#recipe=Blowfish_Encrypt(%7B'option':'Hex','string':''%7D,%7B'option':'Hex','string':''%7D,'CBC','Raw','Hex')Blowfish_Decrypt(%7B'option':'Hex','string':''%7D,%7B'option':'Hex','string':''%7D,'CBC','Hex','Raw')",
+        "DES": "https://gchq.github.io/CyberChef/#recipe=DES_Encrypt(%7B'option':'Hex','string':''%7D,%7B'option':'Hex','string':''%7D,'CBC','Raw','Hex')DES_Decrypt(%7B'option':'Hex','string':''%7D,%7B'option':'Hex','string':''%7D,'CBC','Hex','Raw')",
+        "RC4": "https://gchq.github.io/CyberChef/#recipe=RC4(%7B'option':'UTF8','string':''%7D,'Latin1','Latin1')To_Hex('Space',0)From_Hex('Auto')",
+        "RSA": "https://gchq.github.io/CyberChef/#recipe=RSA_Encrypt('-----BEGIN%20RSA%20PUBLIC%20KEY-----','RSA-OAEP','SHA-1')RSA_Decrypt('-----BEGIN%20RSA%20PRIVATE%20KEY-----','','RSA-OAEP','SHA-1')",
+        "SM4": "https://gchq.github.io/CyberChef/#recipe=SM4_Encrypt(%7B'option':'Hex','string':''%7D,%7B'option':'Hex','string':''%7D,'CBC','Raw','Hex')SM4_Decrypt(%7B'option':'Hex','string':''%7D,%7B'option':'Hex','string':''%7D,'CBC','Raw','Hex')",
+        "XOR": "https://gchq.github.io/CyberChef/#recipe=XOR(%7B'option':'UTF8','string':'test'%7D,'Standard',false)",
+        "XXTEA": "https://gchq.github.io/CyberChef/#recipe=XXTEA_Encrypt(%7B'option':'Hex','string':''%7D)XXTEA_Decrypt(%7B'option':'Hex','string':''%7D)&input=aGVsbG8gd29ybGQh"
+      }
+    },
+    "压缩": {
+      "解压": {
+        "Gzip": "https://gchq.github.io/CyberChef/#recipe=Gzip('Dynamic%20Huffman%20Coding','','',false)Gunzip()&input=Y2hhbmd4aWFva2FuZw",
+        "LZ4": "https://gchq.github.io/CyberChef/#recipe=LZ4_Compress()LZ4_Decompress()&input=Y2hhbmd4aWFva2FuZw",
+        "Zip": "https://gchq.github.io/CyberChef/#recipe=Zip('file.txt','','','Deflate','MSDOS','Dynamic%20Huffman%20Coding')Unzip('',false)&input=Y2hhbmd4aWFva2FuZw"
+      }
+    },
+    "哈希": {
+      "散列": {
+        "CRC": "http://www.ip33.com/crc.html",
+        "MD5": "https://gchq.github.io/CyberChef/#recipe=MD5()",
+        "SM3": "https://gchq.github.io/CyberChef/#recipe=SM3(256,64)",
+        "CrackMd5": {
+          "CMD5": "https://www.cmd5.com/",
+          "ChaMd5": "http://www.chamd5.org/",
+          "CrackStation": "https://crackstation.net/",
+          "PMD5": "https://pmd5.com/"
+        }
+      }
+    },
+    "样本分析": {
+      "PUBGDec": "https://gchq.github.io/CyberChef/#recipe=AES_Encrypt(%7B'option':'Base64','string':'N2E4MmFmYzQtZGE1OC00MQ%3D%3D'%7D,%7B'option':'Base64','string':'bnVsbA%3D%3D'%7D,'ECB','Raw','Raw',%7B'option':'Hex','string':''%7D/disabled)To_Base64('A-Za-z0-9%2B/%3D'/disabled)From_Base64('A-Za-z0-9%2B/%3D',true,false)AES_Decrypt(%7B'option':'Base64','string':'N2E4MmFmYzQtZGE1OC00MQ%3D%3D'%7D,%7B'option':'Base64','string':'bnVsbA%3D%3D'%7D,'ECB','Raw','Raw',%7B'option':'Hex','string':''%7D,%7B'option':'Hex','string':''%7D)&ieol=CRLF&oeol=FF",
+      "QeeyouDec": "https://gchq.github.io/CyberChef/#recipe=From_Base64('A-Za-z0-9%2B/%3D',true,false)AES_Decrypt(%7B'option':'Base64','string':'a0dEWXdHWThpOFpVNkZXdg%3D%3D'%7D,%7B'option':'Base64','string':'a0dEWXdHWThpOFpVNkZXdg%3D%3D'%7D,'CBC','Raw','Raw',%7B'option':'Hex','string':''%7D,%7B'option':'Hex','string':''%7D)",
+      "UUDec": "https://gchq.github.io/CyberChef/#recipe=From_Base64('A-Za-z0-9%2B/%3D',true,false)AES_Decrypt(%7B'option':'Base64','string':'NmY0MGY2ZjI3MTMxNWM4ZQ%3D%3D'%7D,%7B'option':'Base64','string':'bnVsbA%3D%3D'%7D,'ECB','Raw','Raw',%7B'option':'Hex','string':''%7D,%7B'option':'Hex','string':''%7D)Gunzip()JSON_Beautify('%20%20%20%20',false,true)",
+      "XunyouDec": "https://gchq.github.io/CyberChef/#recipe=From_Base64('A-Za-z0-9%2B/%3D',true,false)XOR(%7B'option':'Latin1','string':'qIudQA46JWmRAB8gp3MNBVuGY9weiCLEz5g2iaUFmEH7NThORI7yHStMLuJ7h1AQwlzSrU9AlzpsPm9PfLtvvpVd95ase7YniGyF5yLa7jpqfhjpeNwFQyUpUXXs9UnL'%7D,'Standard',false)Gunzip()JSON_Beautify('%20%20%20%20',false,true)&oenc=65001&oeol=NEL",
+      "XunyouEnc": "https://gchq.github.io/CyberChef/#recipe=Gzip('Dynamic%20Huffman%20Coding','','',false)XOR(%7B'option':'Latin1','string':'qIudQA46JWmRAB8gp3MNBVuGY9weiCLEz5g2iaUFmEH7NThORI7yHStMLuJ7h1AQwlzSrU9AlzpsPm9PfLtvvpVd95ase7YniGyF5yLa7jpqfhjpeNwFQyUpUXXs9UnL'%7D,'Standard',false)To_Base64('A-Za-z0-9%2B/%3D')&oenc=65001&oeol=NEL",
+      "biubiuDec": "https://gchq.github.io/CyberChef/#recipe=From_Base64('A-Za-z0-9%2B/%3D',true,false)AES_Decrypt(%7B'option':'Base64','string':'9Ej8XXcCkMHY5ldxwdfC3w%3D%3D'%7D,%7B'option':'Base64','string':'97Gw9lKFtlVvdPL3Xg/UtQ%3D%3D'%7D,'CBC','Raw','Raw',%7B'option':'Hex','string':''%7D,%7B'option':'Hex','string':''%7D)URL_Decode()Decode_text('UTF-8%20(65001)')JSON_Beautify('%20%20%20%20',false,true)&oenc=65001",
+      "字典解密方法": "https://gchq.github.io/CyberChef/#recipe=XOR(%7B'option':'UTF8','string':'qIudQA46JWmRAB8gp3MNBVuGY9weiCLEz5g2iaUFmEH7NThORI7yHStMLuJ7h1AQwlzSrU9AlzpsPm9PfLtvvpVd95ase7YniGyF5yLa7jpqfhjpeNwFQyUpUXXs9UnL'%7D,'Standard',false)Gunzip()&oenc=65001"
+    },
+    "编码转换": {
+      "ASCII转码": "https://www.sojson.com/ascii.html",
+      "Base64编码": "https://www.base64decode.org/zh/",
+      "BeJSON": "https://www.bejson.com/",
+      "From Base64": "https://gchq.github.io/CyberChef/#recipe=From_Base64('A-Za-z0-9%2B/%3D',true,false)To_Base64('A-Za-z0-9%2B/%3D'/disabled)",
+      "JSON Beautify": "https://gchq.github.io/CyberChef/#recipe=JSON_Beautify('%20%20%20%20',false,true)",
+      "URL转码": "https://www.urldecoder.org/zh/",
+      "UTF8编码": "https://www.sojson.com/utf8.html",
+      "Unicode编码": "https://tool.chinaz.com/tools/unicode.aspx",
+      "UnixTime": "https://tool.chinaz.com/tools/unixtime.aspx"
+    }
+  },
+  "UavSec": {
+    "DJI Developer": "https://developer.dji.com/cn/",
+    "DJI Phantom Drone Forum": "https://phantompilots.com/",
+    "Drone Club": "https://greyarro.ws/c/modifications-firmware-updates/8",
+    "Drone-Hacks": "https://drone-hacks.com/",
+    "Drone-Hacks Wiki!": "https://wiki.drone-hacks.com/",
+    "GNU Radio 教程": "https://beautifulzzzz.com/gnuradio/tutorial/topic/1",
+    "穿越机工具箱": "http://mklb.xyz/",
+    "穿越机技术基础": "https://zhuanlan.zhihu.com/p/559167912",
+    "Root": {
+      "DJI FPV 和 FCC 黑客攻击": "https://greyarro.ws/t/dji-fpv-and-fcc-hack/47005",
+      "DJI RC FCC 对 DJI RC  root": "https://www.researchgate.net/figure/DJI-RC-rooting-using-DJI-RC-FCC-a-Successful-rooting-using-DJI-RC-FCC-b-Check-root_fig2_375253659",
+      "DJI-Hack": "https://www.youtube.com/watch?v=lBQ6kShGX8M",
+      "DUMLRacer 为 DJI Mavic Pro、Phantom 4 和 Inspire 2 获取 root": "https://greyarro.ws/t/how-to-root-your-dji-mavic-pro-phantom-4-and-inspire-2-using-dumlracer-and-completely-remove-nfz/1878",
+      "FPV.WTF Hack": "https://oscarliang.com/fpv-wtf-root-hack-dji/",
+      "Mavic Pro 进行 Root 操作": "https://www.rcgroups.com/forums/showthread.php?3058818-Rooting-Mavic-Pro-in-Latest-firmware-with-Force-FCC-and-Boost-and-No-NFZ",
+      "RC2 ROOT": "https://www.reddit.com/r/dji/comments/1kpg3z5/i_got_adb_root_access_to_rc_2_what_to_do_next/",
+      "大疆v2降级&Root": "https://www.bilibili.com/video/BV1ym421H7p3/?vd_source=b7f5417bfa648147bbbaedc2f250b061"
+    }
+  },
+  "WP": {
+    "AttackDefense": "https://attackdefense.com/members",
+    "Awvs破解版": "https://www.ddosi.org/awvs-3/",
+    "BUGBANK技能树": "https://skills.bugbank.cn/",
+    "FOFA": "https://fofa.info/",
+    "Goby": "https://cn.gobies.org/",
+    "Hacksplaining": "https://hacksplaining.com/lessons",
+    "JavaScript加密": "https://www.jsjiami.com/",
+    "Live Attack Map": "https://norse-corp.com/map/",
+    "Norse Attack Map": "http://map.norsecorp.com/",
+    "OWASP Top 10": "https://owasp.org/Top10/zh_CN/",
+    "SecWiki": "https://secwiki.org/w/Main_Page",
+    "TscanPlus": "https://github.com/TideSec/TscanPlus",
+    "Web Security Academy": "https://portswigger.net/web-security/learning-path",
+    "WooYun公开漏洞查询": "https://wooyun.website/",
+    "卡巴斯基网络威胁实时地图": "https://cybermap.kaspersky.com/cn",
+    "合天网安实验室": "https://www.hetianlab.com/",
+    "鹰图平台": "https://hunter.qianxin.com/"
+  },
+  "eBPF": {
+    "Armbian": "https://www.armbian.com/"
+  }
+}
